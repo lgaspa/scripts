@@ -1,0 +1,31 @@
+runtime! debian.vim
+
+syntax enable
+set tabstop=4
+set softtabstop=4
+set expandtab
+
+set number
+set showcmd
+set cursorline
+set showmatch
+set incsearch
+set hlsearch
+set ignorecase
+set autoindent
+set lazyredraw
+set ruler
+set title
+set history=1000
+
+set backspace=indent,eol,start
+
+"disable arrow keys for navigation mode (use HJKL)
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+
+if filereadable("/etc/vim/vimrc.local")
+  source /etc/vim/vimrc.local
+endif
