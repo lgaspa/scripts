@@ -1,9 +1,7 @@
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export EDITOR=vim
+
 ZSH_TMUX_AUTOSTART=true
-ZSH_TMUX_AUTOQUIT=false
-
-
-# Path to your oh-my-zsh installation.
-export ZSH="/root/.oh-my-zsh"
 
 #set zsh theme
 ZSH_THEME="robbyrussell"
@@ -17,6 +15,9 @@ ENABLE_CORRECTION="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git tmux docker docker-compose zsh-autosuggestions zsh-syntax-highlighting man)
 
+# Path to your oh-my-zsh installation.
+echo $ZSH
+export ZSH="/home/$(whoami)/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
